@@ -1,4 +1,4 @@
-package org.camunda.bpm.dmn.engine.impl;
+package org.cibseven.bpm.dmn.engine.impl;
 
 public interface __NotImplemented {
   UnsupportedOperationException EXCEPTION = new UnsupportedOperationException(

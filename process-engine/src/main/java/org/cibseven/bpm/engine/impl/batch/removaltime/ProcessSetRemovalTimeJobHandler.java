@@ -1,4 +1,4 @@
-package org.camunda.bpm.engine.impl.batch.removaltime;
+package org.cibseven.bpm.engine.impl.batch.removaltime;
 
 /**
  * Class referenced in JavaDoc only, but contained as an import in org.camunda.bpm.engine.history.SetRemovalTimeToHistoricProcessInstancesBuilder

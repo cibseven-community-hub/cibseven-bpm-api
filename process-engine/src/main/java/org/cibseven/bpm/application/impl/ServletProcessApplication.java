@@ -1,7 +1,7 @@
-package org.camunda.bpm.application.impl;
+package org.cibseven.bpm.application.impl;
 
 /**
  * Class referenced from JavaDoc of {@link org.camunda.bpm.application.ProcessApplicationInterface}
  */
-public interface EmbeddedProcessApplication {
+public interface ServletProcessApplication {
 }

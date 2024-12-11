@@ -1,4 +1,4 @@
-package org.camunda.bpm.engine.impl.jobexecutor;
+package org.cibseven.bpm.engine.impl.jobexecutor;
 
 /**
  * Job executor should be not referenced directly from API.

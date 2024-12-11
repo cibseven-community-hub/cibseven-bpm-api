@@ -1,6 +1,6 @@
-package org.camunda.bpm.engine.impl.util;
+package org.cibseven.bpm.engine.impl.util;
 
-import org.camunda.bpm.engine.impl.__NotImplemented;
+import org.cibseven.bpm.engine.impl.__NotImplemented;
 
 /**
  * Referenced from {@link org.camunda.bpm.engine.delegate.BpmnError}

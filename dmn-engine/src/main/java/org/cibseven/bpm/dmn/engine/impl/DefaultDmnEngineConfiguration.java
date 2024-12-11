@@ -1,4 +1,4 @@
-package org.camunda.bpm.dmn.engine.impl;
+package org.cibseven.bpm.dmn.engine.impl;
 
 import org.cibseven.bpm.dmn.engine.DmnEngine;
 import org.cibseven.bpm.dmn.engine.DmnEngineConfiguration;
