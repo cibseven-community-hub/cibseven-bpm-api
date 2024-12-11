@@ -19,24 +19,24 @@
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.camunda.bpm.model</groupId>
-      <artifactId>camunda-bpmn-model</artifactId>
+      <groupId>org.cibseven.bpm.model</groupId>
+      <artifactId>cibseven-bpmn-model</artifactId>
     </dependency>
     <dependency>
-      <groupId>org.camunda.bpm.model</groupId>
-      <artifactId>camunda-cmmn-model</artifactId>
+      <groupId>org.cibseven.bpm.model</groupId>
+      <artifactId>cibseven-cmmn-model</artifactId>
     </dependency>
     <dependency>
-      <groupId>org.camunda.bpm.model</groupId>
-      <artifactId>camunda-dmn-model</artifactId>
+      <groupId>org.cibseven.bpm.model</groupId>
+      <artifactId>cibseven-dmn-model</artifactId>
     </dependency>
     <dependency>
-      <groupId>org.camunda.commons</groupId>
-      <artifactId>camunda-commons-typed-values</artifactId>
+      <groupId>org.cibseven.commons</groupId>
+      <artifactId>cibseven-commons-typed-values</artifactId>
     </dependency>
     <dependency>
-      <groupId>org.camunda.bpm.juel</groupId>
-      <artifactId>camunda-juel</artifactId>
+      <groupId>org.cibseven.bpm.juel</groupId>
+      <artifactId>cibseven-juel</artifactId>
     </dependency>
   </dependencies>
 
@@ -54,62 +54,62 @@
             <configuration>
               <artifactItems>
                 <artifactItem>
-                  <groupId>org.camunda.bpm</groupId>
-                  <artifactId>camunda-engine</artifactId>
-                  <version>${camunda-engine.version}</version>
+                  <groupId>org.cibseven.bpm</groupId>
+                  <artifactId>cibseven-engine</artifactId>
+                  <version>${cibseven-engine.version}</version>
                   <type>jar</type>
                   <classifier>sources</classifier>
                   <overWrite>false</overWrite>
                   <outputDirectory>${project.build.directory}/generated-sources/engine/src/main/java</outputDirectory>
 
                   <excludes>
-                    org/camunda/bpm/engine/ParseException.java,
-                    org/camunda/bpm/engine/BpmnParseException.java,
-                    org/camunda/bpm/engine/impl/juel/TreeBuilderException.java,
+                    org/cibseven/bpm/engine/ParseException.java,
+                    org/cibseven/bpm/engine/BpmnParseException.java,
+                    org/cibseven/bpm/engine/impl/juel/TreeBuilderException.java,
                   </excludes>
 
                   <includes>
-                    org/camunda/bpm/ProcessApplicationService.java,
-                    org/camunda/bpm/application/InvocationContext.java,
-                    org/camunda/bpm/application/ProcessApplication.java,
-                    org/camunda/bpm/application/ProcessApplicationDeploymentInfo.java,
-                    org/camunda/bpm/application/ProcessApplicationInfo.java,
-                    org/camunda/bpm/application/ProcessApplicationInterface.java,
-                    org/camunda/bpm/application/ProcessApplicationReference.java,
-                    org/camunda/bpm/application/ProcessApplicationRegistration.java,
-                    org/camunda/bpm/application/**/*Exception.java,
+                    org/cibseven/bpm/ProcessApplicationService.java,
+                    org/cibseven/bpm/application/InvocationContext.java,
+                    org/cibseven/bpm/application/ProcessApplication.java,
+                    org/cibseven/bpm/application/ProcessApplicationDeploymentInfo.java,
+                    org/cibseven/bpm/application/ProcessApplicationInfo.java,
+                    org/cibseven/bpm/application/ProcessApplicationInterface.java,
+                    org/cibseven/bpm/application/ProcessApplicationReference.java,
+                    org/cibseven/bpm/application/ProcessApplicationRegistration.java,
+                    org/cibseven/bpm/application/**/*Exception.java,
 
-                    org/camunda/bpm/engine/*Service.java,
-                    org/camunda/bpm/engine/**/*Exception.java,
+                    org/cibseven/bpm/engine/*Service.java,
+                    org/cibseven/bpm/engine/**/*Exception.java,
 
-                    org/camunda/bpm/engine/EntityTypes.java,
-                    org/camunda/bpm/engine/ProcessEngineServices.java,
-                    org/camunda/bpm/engine/ProcessEngine.java,
+                    org/cibseven/bpm/engine/EntityTypes.java,
+                    org/cibseven/bpm/engine/ProcessEngineServices.java,
+                    org/cibseven/bpm/engine/ProcessEngine.java,
 
-                    org/camunda/bpm/engine/authorization/**/*.java,
-                    org/camunda/bpm/engine/batch/**/*.java,
-                    org/camunda/bpm/engine/delegate/**/*.java,
-                    org/camunda/bpm/engine/dmn/**/*.java,
-                    org/camunda/bpm/engine/exception/**/*.java,
-                    org/camunda/bpm/engine/externaltask/**/*.java,
-                    org/camunda/bpm/engine/filter/**/*.java,
-                    org/camunda/bpm/engine/form/**/*.java,
-                    org/camunda/bpm/engine/history/**/*.java,
-                    org/camunda/bpm/engine/identity/**/*.java,
-                    org/camunda/bpm/engine/management/**/*.java,
-                    org/camunda/bpm/engine/migration/**/*.java,
-                    org/camunda/bpm/engine/query/**/*.java,
-                    org/camunda/bpm/engine/repository/**/*.java,
-                    org/camunda/bpm/engine/runtime/**/*.java,
-                    org/camunda/bpm/engine/task/**/*.java,
-                    org/camunda/bpm/engine/telemetry/**.java,
+                    org/cibseven/bpm/engine/authorization/**/*.java,
+                    org/cibseven/bpm/engine/batch/**/*.java,
+                    org/cibseven/bpm/engine/delegate/**/*.java,
+                    org/cibseven/bpm/engine/dmn/**/*.java,
+                    org/cibseven/bpm/engine/exception/**/*.java,
+                    org/cibseven/bpm/engine/externaltask/**/*.java,
+                    org/cibseven/bpm/engine/filter/**/*.java,
+                    org/cibseven/bpm/engine/form/**/*.java,
+                    org/cibseven/bpm/engine/history/**/*.java,
+                    org/cibseven/bpm/engine/identity/**/*.java,
+                    org/cibseven/bpm/engine/management/**/*.java,
+                    org/cibseven/bpm/engine/migration/**/*.java,
+                    org/cibseven/bpm/engine/query/**/*.java,
+                    org/cibseven/bpm/engine/repository/**/*.java,
+                    org/cibseven/bpm/engine/runtime/**/*.java,
+                    org/cibseven/bpm/engine/task/**/*.java,
+                    org/cibseven/bpm/engine/telemetry/**.java,
 
-                    org/camunda/bpm/engine/impl/bpmn/parser/Error.java,
-                    org/camunda/bpm/engine/impl/core/variable/mapping/value/ParameterValueProvider.java,
-                    org/camunda/bpm/engine/impl/errorcode/BuiltinExceptionCode.java,
-                    org/camunda/bpm/engine/impl/errorcode/ExceptionCodeProvider.java,
-                    org/camunda/bpm/engine/impl/identity/Account.java,
-                    org/camunda/bpm/engine/impl/identity/Authentication.java,
+                    org/cibseven/bpm/engine/impl/bpmn/parser/Error.java,
+                    org/cibseven/bpm/engine/impl/core/variable/mapping/value/ParameterValueProvider.java,
+                    org/cibseven/bpm/engine/impl/errorcode/BuiltinExceptionCode.java,
+                    org/cibseven/bpm/engine/impl/errorcode/ExceptionCodeProvider.java,
+                    org/cibseven/bpm/engine/impl/identity/Account.java,
+                    org/cibseven/bpm/engine/impl/identity/Authentication.java,
                   </includes>
                 </artifactItem>
               </artifactItems>

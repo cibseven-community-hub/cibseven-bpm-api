@@ -14,12 +14,12 @@
 
   <dependencies>
     <dependency>
-      <groupId>org.camunda.bpm.model</groupId>
-      <artifactId>camunda-dmn-model</artifactId>
+      <groupId>org.cibseven.bpm.model</groupId>
+      <artifactId>cibseven-dmn-model</artifactId>
     </dependency>
     <dependency>
-      <groupId>org.camunda.commons</groupId>
-      <artifactId>camunda-commons-typed-values</artifactId>
+      <groupId>org.cibseven.commons</groupId>
+      <artifactId>cibseven-commons-typed-values</artifactId>
     </dependency>
 
   </dependencies>
@@ -38,17 +38,17 @@
             <configuration>
               <artifactItems>
                 <artifactItem>
-                  <groupId>org.camunda.bpm.dmn</groupId>
-                  <artifactId>camunda-engine-dmn</artifactId>
-                  <version>${camunda-engine.version}</version>
+                  <groupId>org.cibseven.bpm.dmn</groupId>
+                  <artifactId>cibseven-engine-dmn</artifactId>
+                  <version>${cibseven-engine.version}</version>
                   <type>jar</type>
                   <classifier>sources</classifier>
                   <overWrite>false</overWrite>
                   <outputDirectory>${project.build.directory}/generated-sources/dmn-engine/src/main/java</outputDirectory>
                   <includes>
-                    org/camunda/bpm/dmn/engine/*.java,
-                    org/camunda/bpm/dmn/engine/delegate/*.java,
-                    org/camunda/bpm/dmn/engine/spi/DmnEngineMetricCollector.java,
+                    org/cibseven/bpm/dmn/engine/*.java,
+                    org/cibseven/bpm/dmn/engine/delegate/*.java,
+                    org/cibseven/bpm/dmn/engine/spi/DmnEngineMetricCollector.java,
                   </includes>
                 </artifactItem>
               </artifactItems>
