@@ -2,12 +2,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>io.holunda.camunda-api</groupId>
-  <artifactId>camunda-api-parent</artifactId>
-  <version>7.22.1-SNAPSHOT</version>
+  <groupId>org.cibseven.community.cibseven-api</groupId>
+  <artifactId>cibseven-api-parent</artifactId>
+  <version>1.1.0</version>
+
   <name>${project.artifactId}</name>
-  <description>Camunda BPM Engine API</description>
-  <url>https://github.com/holunda-io/camunda-bpm-api/</url>
+  <description>CIB seven BPM Engine API</description>
+  <url>https://github.com/cibseven-community-hub/cibseven-bpm-api/</url>
   <packaging>pom</packaging>
 
   <properties>
@@ -337,16 +338,16 @@
   </licenses>
 
   <scm>
-    <connection>scm:git:git@github.com:holunda-io/camunda-bpm-api.git</connection>
-    <url>scm:git:git@github.com:holunda-io/camunda-bpm-api.git</url>
-    <developerConnection>scm:git:git@github.com:holunda-io/camunda-bpm-api.git</developerConnection>
+    <connection>scm:git:git@github.com:cibseven-community-hub/cibseven-bpm-api.git</connection>
+    <url>scm:git:git@github.com:cibseven-community-hub/cibseven-bpm-api.git</url>
+    <developerConnection>scm:git:git@github.com:cibseven-community-hub/cibseven-bpm-api.git</developerConnection>
     <tag>HEAD</tag>
   </scm>
 
   <distributionManagement>
     <site>
       <id>README</id>
-      <url>https://github.com/holunda-io/camunda-bpm-api</url>
+      <url>https://github.com/cibseven-community-hub/cibseven-bpm-api</url>
     </site>
     <snapshotRepository>
       <id>ossrh</id>
