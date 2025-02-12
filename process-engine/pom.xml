@@ -90,7 +90,6 @@
 
                     org/cibseven/bpm/engine/EntityTypes.java,
                     org/cibseven/bpm/engine/ProcessEngineServices.java,
-                    org/cibseven/bpm/engine/ProcessEngineException.java,
                     org/cibseven/bpm/engine/ProcessEngine.java,
 
                     org/cibseven/bpm/engine/authorization/**/*.java,
