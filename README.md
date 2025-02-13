@@ -75,10 +75,18 @@ Please note that the version of this library is tightly-coupled to the version o
 
 ## Supported version
 
+Used BPM engine:
+
 | CIB seven BPM Version | CIB seven BPM API Version | 
 |-----------------------|--------------------------:| 
 | 1.1.0                 |                     1.1.0 |
 
+
+Upstream:
+
+io.holunda.data:camunda-bpm-api | org.cibseven.community.data:cibseven-bpm-api
+--- | --- 
+7.22.1 | 1.1.0
 
 ## License
 
