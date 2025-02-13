@@ -121,7 +121,7 @@ pipeline {
             steps {
                 script {
                     withMaven(options: []) {
-                        sh "mvn -T4 -Prelease -U -DskipTests clean deploy"
+                        sh "mvn -T4 -U -DskipTests clean deploy"
                     }
                 }
             }
@@ -138,7 +138,7 @@ pipeline {
                 script {
                     withMaven(options: []) {
                         sh """
-                            mvn -T4 -Prelease -U \
+                            mvn -T4 -U \
                                 clean deploy \
                                 -Psonatype-oss-release \
                                 -Dskip.cibseven.release=false \
