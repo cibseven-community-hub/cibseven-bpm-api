@@ -204,32 +204,6 @@
           </configuration>
         </plugin>
 
-        <!-- To sign the artifacts -->
-        <!-- 
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-gpg-plugin</artifactId>
-          <version>3.2.7</version>
-          <configuration>
-            <gpgArguments>
-              <arg>--batch</arg>
-              <arg>--yes</arg>
-              <arg>--pinentry-mode</arg>
-              <arg>loopback</arg>
-            </gpgArguments>
-          </configuration>
-          <executions>
-            <execution>
-              <id>sign-artifacts</id>
-              <phase>verify</phase>
-              <goals>
-                <goal>sign</goal>
-              </goals>
-            </execution>
-          </executions>
-        </plugin>
-        -->
-
         <!-- Deploy -->
         <plugin>
           <artifactId>maven-deploy-plugin</artifactId>
@@ -324,10 +298,6 @@
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-source-plugin</artifactId>
           </plugin>
-<!--          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-gpg-plugin</artifactId>
-          </plugin> -->
           <plugin>
             <groupId>org.sonatype.plugins</groupId>
             <artifactId>nexus-staging-maven-plugin</artifactId>
