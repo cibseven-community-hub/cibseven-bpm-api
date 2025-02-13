@@ -106,7 +106,7 @@ pipeline {
             steps {
                 script {
                     withMaven(options: [junitPublisher(disabled: false), jacocoPublisher(disabled: false)]) {
-                        sh "mvn -T4 -Prelease -Dbuild.number=${BUILD_NUMBER} install"
+                        sh "mvn -T4 -Dbuild.number=${BUILD_NUMBER} install"
                     }
 
                     junit allowEmptyResults: true, testResults: ConstantsInternal.MAVEN_TEST_RESULTS
@@ -121,7 +121,7 @@ pipeline {
             steps {
                 script {
                     withMaven(options: []) {
-                        sh "mvn -T4 -U -DskipTests clean deploy"
+                        sh "mvn -T4 -Prelease -U -DskipTests clean deploy"
                     }
                 }
             }
@@ -138,7 +138,7 @@ pipeline {
                 script {
                     withMaven(options: []) {
                         sh """
-                            mvn -T4 -U \
+                            mvn -T4 -Prelease -U \
                                 clean deploy \
                                 -Psonatype-oss-release \
                                 -Dskip.cibseven.release=false \
