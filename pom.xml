@@ -20,6 +20,12 @@
     <maven.compiler.target>${java.version}</maven.compiler.target>
 
     <cibseven-engine.version>1.1.0</cibseven-engine.version>
+
+    <nexus.snapshot.repository.id>mvn-cibseven-snapshots</nexus.snapshot.repository.id>
+    <nexus.snapshot.repository>https://artifacts.cibseven.org/repository/snapshots</nexus.snapshot.repository>
+
+    <nexus.release.repository.id>mvn-cibseven-public</nexus.release.repository.id>
+    <nexus.release.repository>https://artifacts.cibseven.org/repository/public</nexus.release.repository>
   </properties>
 
   <modules>
@@ -247,8 +253,7 @@
                 <nexusUrl>https://oss.sonatype.org/</nexusUrl>
                 <autoReleaseAfterClose>true</autoReleaseAfterClose>
                 <!-- go to oss.nexus.org and inspect the failure -->
-                <keepStagingRepositoryOnCloseRuleFailure>true
-                </keepStagingRepositoryOnCloseRuleFailure>
+                <keepStagingRepositoryOnCloseRuleFailure>true</keepStagingRepositoryOnCloseRuleFailure>
               </configuration>
             </execution>
           </executions>
@@ -345,10 +350,6 @@
   </scm>
 
   <distributionManagement>
-    <site>
-      <id>README</id>
-      <url>https://github.com/cibseven-community-hub/cibseven-bpm-api</url>
-    </site>
     <snapshotRepository>
       <id>ossrh</id>
       <url>https://oss.sonatype.org/content/repositories/snapshots</url>
@@ -357,6 +358,16 @@
       <id>ossrh</id>
       <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
     </repository>
+
+    <snapshotRepository>
+      <id>${nexus.snapshot.repository.id}</id>
+      <url>${nexus.snapshot.repository}</url>
+    </snapshotRepository>
+    <repository>
+      <id>${nexus.release.repository.id}</id>
+      <url>${nexus.release.repository}</url>
+    </repository>
+
   </distributionManagement>
 
   <repositories>
