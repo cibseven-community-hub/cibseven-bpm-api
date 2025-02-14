@@ -1,28 +1,25 @@
-# Camunda Platform 7 Engine API
+# CIB seven Engine API
 
 A small extract of the API layer from the greatest process engine ever.
 
-[![stable](https://img.shields.io/badge/lifecycle-STABLE-green.svg)](https://github.com/holisticon#open-source-lifecycle)
-[![Camunda 7.20](https://img.shields.io/badge/Camunda%20Version-7.22-orange.svg)](https://docs.camunda.org/manual/7.22/)
-[![Build Status](https://github.com/holunda-io/camunda-bpm-api/actions/workflows/default.yml/badge.svg)](https://github.com/holunda-io/camunda-bpm-api/actions/workflows/default.yml)
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.holunda.camunda-api/camunda-bpm-engine-api/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.holunda.camunda-api/camunda-bpm-engine-api)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.cibseven.community.cibseven-api/cibseven-bpm-engine-api/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.cibseven.community.cibseven-api/cibseven-bpm-engine-api)
 
 ## What is this?
 
-Sometimes for building libraries it is useful to have the API only, without the implementation. This library extracts the official Java Camunda Engine API from Camunda JAR and packages it as a small JAR. By doing so, we had to provide very few own classes, to cut the track to implementation. It is by **NO MEANS** a replacement, but just a bunch of classes which may be required on the classpath, if you use a library referencing Camunda BPM classes (but not using them).
+Sometimes for building libraries it is useful to have the API only, without the implementation. This library extracts the official Java CIB seven Engine API from CIB seven JAR and packages it as a small JAR. By doing so, we had to provide very few own classes, to cut the track to implementation. It is by **NO MEANS** a replacement, but just a bunch of classes which may be required on the classpath, if you use a library referencing CIB seven BPM classes (but not using them).
 
 ## Why do you need this
 
-Imagine you are implementing a remote-communication library like Camunda REST Client Spring Boot that implements the Camunda Plattform 7 Engine API by calling a remote process engine. Or you are building a library that wants to use different artifacts of the Camunda API, without puting them on a compile 
+Imagine you are implementing a remote-communication library like CIB seven REST Client Spring Boot that implements the CIB seven Engine API by calling a remote process engine. Or you are building a library that wants to use different artifacts of the CIB seven API, without puting them on a compile 
 dependency. Then - consider to use this lib...
 
 
 Short facts:
 
-| Original Library         | Size (mean)  | Dependencies  | API only               | Size (mean) | Dependencies |
-| ------------------------ | -----------: | ------------: | ---------------------- | ----------: |-------------:|
-| camunda-engine           |    4,7 mb    |    20         | camunda-bpm-engine-api |   225 kb    |            7 |
-| camunda-engine-dmn       |    144 kb    |     6         | camunda-dmn-engine-api |    14 kb    |            3 |
+| Original Library         | Size (mean)  | Dependencies  | API only                | Size (mean) | Dependencies |
+| ------------------------ | -----------: | ------------: | ----------------------- | ----------: |-------------:|
+| cibseven-engine          |    4,7 mb    |    20         | cibseven-bpm-engine-api |   225 kb    |            7 |
+| cibseven-engine-dmn      |    144 kb    |     6         | cibseven-dmn-engine-api |    14 kb    |            3 |
 
 
 ## Quick Introduction
@@ -32,8 +29,8 @@ If you just want to start using the library, put the following dependency into y
 
 ```xml
 <dependency>
-  <groupId>io.holunda.camunda-api</groupId>
-  <artifactId>camunda-bpm-engine-api</artifactId>
+  <groupId>org.cibseven.community.cibseven-api</groupId>
+  <artifactId>cibseven-bpm-engine-api</artifactId>
   <version>7.22.0</version>
 </dependency>
 ```
@@ -42,8 +39,8 @@ If you are interested in using the DMN engine API only, put the following depend
 
 ```xml
 <dependency>
-    <groupId>io.holunda.camunda-api</groupId>
-    <artifactId>camunda-dmn-engine-api</artifactId>
+    <groupId>org.cibseven.community.cibseven-api</groupId>
+    <artifactId>cibseven-dmn-engine-api</artifactId>
     <version>7.22.0</version>
 </dependency>
 ```
@@ -52,45 +49,44 @@ If you are interested in using the DMN engine API only, put the following depend
 If you are using Gradle Kotlin DSL add to your `build.gradle.kts`:
 
 ```kotlin
-implementation("io.holunda.camunda-api:camunda-bpm-engine-api:7.22.0")
+implementation("org.cibseven.community.cibseven-api:cibseven-bpm-engine-api:7.22.0")
 ```
 
 and for DMN only:
 
 ```kotlin
-implementation("io.holunda.camunda-api:camunda-dmn-engine-api:7.22.0")
+implementation("org.cibseven.community.cibseven-api:cibseven-dmn-engine-api:7.22.0")
 ```
 
 
 For Gradle Groovy DSL add to your `build.gradle`:
 
 ```groovy
-implementation 'io.holunda.camunda-api:camunda-bpm-engine-api:7.22.0'
+implementation 'org.cibseven.community.cibseven-api:cibseven-bpm-engine-api:7.22.0'
 ```
 
 and for DMN only:
 
 ```groovy
-implementation 'io.holunda.camunda-api:camunda-bpm-engine-api:7.22.0'
+implementation 'org.cibseven.community.cibseven-api:cibseven-bpm-engine-api:7.22.0'
 ```
 
-Please note that the version of this library is tightly-coupled to the version of original Camunda API.  
+Please note that the version of this library is tightly-coupled to the version of original CIB seven API.  
 
 ## Supported version
 
-| Camunda BPM Version | Camunda BPM API Version | 
-|---------------------|------------------------:| 
-| 7.14                |                  7.14.0 |
-| 7.15                |                  7.15.0 |
-| 7.16                |                  7.16.0 |
-| 7.17                |                  7.17.0 |
-| 7.18                |                  7.18.0 |
-| 7.19                |                  7.19.0 |
-| 7.20                |                  7.20.0 |
-| 7.21                |                  7.21.0 |
-| 7.22                |                  7.22.0 |
+Used BPM engine:
+
+| CIB seven BPM Version | CIB seven BPM API Version | 
+|-----------------------|--------------------------:| 
+| 1.1.0                 |                     1.1.0 |
 
 
+Upstream:
+
+io.holunda.data:camunda-bpm-api | org.cibseven.community.data:cibseven-bpm-api
+--- | --- 
+7.22.1 | 1.1.0
 
 ## License
 

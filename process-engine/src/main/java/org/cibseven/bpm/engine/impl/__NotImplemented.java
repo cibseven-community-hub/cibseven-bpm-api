@@ -1,4 +1,4 @@
-package org.camunda.bpm.engine.impl;
+package org.cibseven.bpm.engine.impl;
 
 /**
  * Contains a dummy exception to make compiler happy and notify the user of the misuse of this library.

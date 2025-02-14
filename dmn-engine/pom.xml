@@ -3,23 +3,25 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <parent>
-    <groupId>io.holunda.camunda-api</groupId>
-    <artifactId>camunda-api-parent</artifactId>
-    <version>7.22.1-SNAPSHOT</version>
+    <groupId>org.cibseven.community.cibseven-api</groupId>
+    <artifactId>cibseven-api-parent</artifactId>
+    <version>1.1.0</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>camunda-dmn-engine-api</artifactId>
-  <name>${project.artifactId}</name>
+  <artifactId>cibseven-dmn-engine-api</artifactId>
+  <name>CIB seven DMN Engine API</name>
 
   <dependencies>
     <dependency>
-      <groupId>org.camunda.bpm.model</groupId>
-      <artifactId>camunda-dmn-model</artifactId>
+      <groupId>org.cibseven.bpm.model</groupId>
+      <artifactId>cibseven-dmn-model</artifactId>
+      <version>${cibseven-engine.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.camunda.commons</groupId>
-      <artifactId>camunda-commons-typed-values</artifactId>
+      <groupId>org.cibseven.commons</groupId>
+      <artifactId>cibseven-commons-typed-values</artifactId>
+      <version>${cibseven-engine.version}</version>
     </dependency>
 
   </dependencies>
@@ -38,17 +40,17 @@
             <configuration>
               <artifactItems>
                 <artifactItem>
-                  <groupId>org.camunda.bpm.dmn</groupId>
-                  <artifactId>camunda-engine-dmn</artifactId>
-                  <version>${camunda-engine.version}</version>
+                  <groupId>org.cibseven.bpm.dmn</groupId>
+                  <artifactId>cibseven-engine-dmn</artifactId>
+                  <version>${cibseven-engine.version}</version>
                   <type>jar</type>
                   <classifier>sources</classifier>
                   <overWrite>false</overWrite>
                   <outputDirectory>${project.build.directory}/generated-sources/dmn-engine/src/main/java</outputDirectory>
                   <includes>
-                    org/camunda/bpm/dmn/engine/*.java,
-                    org/camunda/bpm/dmn/engine/delegate/*.java,
-                    org/camunda/bpm/dmn/engine/spi/DmnEngineMetricCollector.java,
+                    org/cibseven/bpm/dmn/engine/*.java,
+                    org/cibseven/bpm/dmn/engine/delegate/*.java,
+                    org/cibseven/bpm/dmn/engine/spi/DmnEngineMetricCollector.java,
                   </includes>
                 </artifactItem>
               </artifactItems>

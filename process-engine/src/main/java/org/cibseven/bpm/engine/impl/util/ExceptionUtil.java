@@ -1,11 +1,11 @@
-package org.camunda.bpm.engine.impl.util;
+package org.cibseven.bpm.engine.impl.util;
 
-import org.camunda.bpm.engine.impl.__NotImplemented;
+import org.cibseven.bpm.engine.impl.__NotImplemented;
 
 import java.sql.SQLException;
 
 /**
- * Referenced from {@link org.camunda.bpm.engine.impl.errorcode.ExceptionCodeProvider}
+ * Referenced from {@link org.cibseven.bpm.engine.impl.errorcode.ExceptionCodeProvider}
  * Real implementation has dependencies to parts of persistence.
  */
 public class ExceptionUtil {

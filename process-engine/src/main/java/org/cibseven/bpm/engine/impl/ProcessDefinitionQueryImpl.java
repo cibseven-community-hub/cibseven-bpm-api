@@ -1,4 +1,4 @@
-package org.camunda.bpm.engine.impl;
+package org.cibseven.bpm.engine.impl;
 
 /**
  * FIXME: The implementation should not be referenced by the API.
