@@ -125,7 +125,10 @@ pipeline {
 
         stage('Deploy to artifacts.cibseven.org') {
             when {
-                expression { params.DEPLOY == true }
+                allOf {
+                    expression { params.DEPLOY == true }
+                    expression { params.GPG_KEY_PASSPHRASE.toString().isEmpty() }
+                }
             }
             steps {
                 script {
@@ -167,7 +170,7 @@ pipeline {
                                 --global-settings settings.xml \
                                 clean deploy \
                                 -Psonatype-oss-release \
-                                -Dskip.cibseven.release=false \
+                                -Dskip.cibseven.release="${params.DEPLOY}" \
                                 -DskipTests
                         """
                     }
