@@ -170,7 +170,7 @@ pipeline {
                                 --global-settings settings.xml \
                                 clean deploy \
                                 -Psonatype-oss-release \
-                                -Dskip.cibseven.release="${params.DEPLOY}" \
+                                -Dskip.cibseven.release="${!params.DEPLOY}" \
                                 -DskipTests
                         """
                     }
