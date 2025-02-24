@@ -24,10 +24,12 @@
     <dependency>
       <groupId>org.cibseven.bpm.model</groupId>
       <artifactId>cibseven-bpmn-model</artifactId>
+      <version>${cibseven-engine.version}</version>
     </dependency>
     <dependency>
       <groupId>org.cibseven.bpm.model</groupId>
       <artifactId>cibseven-cmmn-model</artifactId>
+      <version>${cibseven-engine.version}</version>
     </dependency>
     <dependency>
       <groupId>org.cibseven.bpm.model</groupId>
