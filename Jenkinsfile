@@ -36,29 +36,14 @@ pipeline {
             description: 'Build and test'
         )
         booleanParam(
-            name: 'DEPLOY',
+            name: 'DEPLOY_TO_ARTIFACTS',
             defaultValue: false,
             description: 'Deploy artifacts to artifacts.cibseven.org'
         )
-        password(
-            name: 'GPG_KEY_PASSPHRASE',
-            defaultValue: '',
-            description: 'Enter a gpg passphrase for deployment to Maven Central (no need to activate DEPLOY parameter above if you want just to deploy to Maven Central). SNAPSHOT version will not be deployed into Maven Central. If you will not change this value - you will not run deploy to Maven Central.'
-        )
-        password(
-            name: 'GPG_KEY_CONTENT',
-            defaultValue: '',
-            description: 'Base64 encoded GPG key content'
-        )
-        string(
-            name: 'COMMUNITY_USERNAME',
-            defaultValue: '',
-            description: 'Community username for publishing to Maven Central'
-        )
-        password(
-            name: 'COMMUNITY_PASSWORD',
-            defaultValue: '',
-            description: 'Community password for publishing to Maven Central'
+        booleanParam(
+            name: 'DEPLOY_TO_MAVEN_CENTRAL',
+            defaultValue: false,
+            description: 'Deploy artifacts to Maven Central'
         )
     }
 
@@ -126,8 +111,8 @@ pipeline {
         stage('Deploy to artifacts.cibseven.org') {
             when {
                 allOf {
-                    expression { params.DEPLOY == true }
-                    expression { params.GPG_KEY_PASSPHRASE.toString().isEmpty() }
+                    expression { params.DEPLOY_TO_ARTIFACTS }
+                    expression { !params.DEPLOY_TO_MAVEN_CENTRAL }
                 }
             }
             steps {
@@ -142,37 +127,28 @@ pipeline {
         stage('Deploy to Maven Central') {
             when {
                 allOf {
-                    expression { params.GPG_KEY_PASSPHRASE.toString().isEmpty() == false } // "" is default value
+                    expression { params.DEPLOY_TO_MAVEN_CENTRAL }
                     expression { mavenProjectInformation.version.endsWith("-SNAPSHOT") == false }
                 }
             }
             steps {
                 script {
-
-                    def keyFile = "./gpg-key.asc"
-                    def decodedContent = new String(
-                        java.util.Base64.decoder.decode(GPG_KEY_CONTENT),
-                        'UTF-8'
-                    )
-                    writeFile file: keyFile, text: decodedContent
-                    sh "gpg --batch --import ${keyFile}"
-                    sh "rm -f ${keyFile}"
-                    
-                    def GPG_KEYNAME = sh(script: "gpg --list-keys --with-colons | grep pub | cut -d: -f5", returnStdout: true).trim()
-                    
                     withMaven(options: []) {
-                        sh """
-                            mvn -T4 -U \
-                                -Dgpg.keyname="${GPG_KEYNAME}" \
-                                -Dgpg.passphrase="${params.GPG_KEY_PASSPHRASE}" \
-                                -Dcommunity.username="${params.COMMUNITY_USERNAME}" \
-                                -Dcommunity.password="${params.COMMUNITY_PASSWORD}" \
-                                --global-settings settings.xml \
-                                clean deploy \
-                                -Psonatype-oss-release \
-                                -Dskip.cibseven.release="${!params.DEPLOY}" \
-                                -DskipTests
-                        """
+                        withCredentials([file(credentialsId: 'credential-cibseven-community-gpg-private-key', variable: 'GPG_KEY_FILE'), string(credentialsId: 'credential-cibseven-community-gpg-passphrase', variable: 'GPG_KEY_PASS')]) {
+                            sh "gpg --batch --import ${GPG_KEY_FILE}"
+    
+                            def GPG_KEYNAME = sh(script: "gpg --list-keys --with-colons | grep pub | cut -d: -f5", returnStdout: true).trim()
+
+                            sh """
+                                mvn -T4 -U \
+                                    -Dgpg.keyname="${GPG_KEYNAME}" \
+                                    -Dgpg.passphrase="${GPG_KEY_PASS}" \
+                                    clean deploy \
+                                    -Psonatype-oss-release \
+                                    -Dskip.cibseven.release="${!params.DEPLOY_TO_ARTIFACTS}" \
+                                    -DskipTests
+                            """
+                        }
                     }
                 }
             }
