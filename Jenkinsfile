@@ -32,7 +32,7 @@ pipeline {
     parameters {
         booleanParam(
             name: 'INSTALL',
-            defaultValue: false,
+            defaultValue: true,
             description: 'Build and test'
         )
         booleanParam(
