@@ -95,15 +95,16 @@ pipeline {
 
         stage('Maven install') {
             when {
-                expression { params.INSTALL == true }
+                expression { params.INSTALL }
             }
             steps {
                 script {
                     withMaven(options: [junitPublisher(disabled: false), jacocoPublisher(disabled: false)]) {
                         sh "mvn -T4 -Dbuild.number=${BUILD_NUMBER} install"
                     }
-
-                    junit allowEmptyResults: true, testResults: ConstantsInternal.MAVEN_TEST_RESULTS
+                    if (!params.DEPLOY_TO_ARTIFACTS && !params.DEPLOY_TO_MAVEN_CENTRAL) {
+                        junit allowEmptyResults: true, testResults: ConstantsInternal.MAVEN_TEST_RESULTS
+                    }
                 }
             }
         }
@@ -118,8 +119,10 @@ pipeline {
             steps {
                 script {
                     withMaven(options: []) {
-                        sh "mvn -T4 -U -DskipTests clean deploy"
+                        sh "mvn -T4 -U clean deploy"
                     }
+                  
+                    junit allowEmptyResults: true, testResults: ConstantsInternal.MAVEN_TEST_RESULTS
                 }
             }
         }
@@ -145,11 +148,12 @@ pipeline {
                                     -Dgpg.passphrase="${GPG_KEY_PASS}" \
                                     clean deploy \
                                     -Psonatype-oss-release \
-                                    -Dskip.cibseven.release="${!params.DEPLOY_TO_ARTIFACTS}" \
-                                    -DskipTests
+                                    -Dskip.cibseven.release="${!params.DEPLOY_TO_ARTIFACTS}"
                             """
                         }
                     }
+
+                    junit allowEmptyResults: true, testResults: ConstantsInternal.MAVEN_TEST_RESULTS
                 }
             }
         }
