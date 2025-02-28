@@ -228,6 +228,14 @@
 
   <developers>
     <developer>
+      <id>cibseven.org</id>
+      <name>CIB seven Community</name>
+      <email>community@cibseven.org</email>
+      <url>http://cibseven.org</url>
+      <organization>cibseven.org</organization>
+      <organizationUrl>http://cibseven.org</organizationUrl>
+    </developer>
+    <developer>
       <name>Simon Zambrovski</name>
       <roles>
         <role>Product Owner</role>
@@ -237,5 +245,13 @@
       <organizationUrl>https://holisticon.de</organizationUrl>
     </developer>
   </developers>
+
+  <repositories>
+    <repository>
+      <id>mvn-cibseven-public</id>
+      <name>CIB seven Public Repository</name>
+      <url>https://artifacts.cibseven.org/repository/public</url>
+    </repository>
+  </repositories>
 
 </project>
