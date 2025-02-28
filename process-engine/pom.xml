@@ -11,8 +11,6 @@
 
   <artifactId>cibseven-bpm-engine-api</artifactId>
   <name>CIB seven BPM Engine API</name>
-  <description>CIB seven BPM Engine API</description>
-  <url>https://github.com/cibseven-community-hub/cibseven-bpm-api/</url>
 
   <dependencies>
     <dependency>
@@ -146,29 +144,5 @@
     </plugins>
   </build>
 
-  <licenses>
-    <license>
-      <name>The Apache Software License, Version 2.0</name>
-      <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
-    </license>
-  </licenses>
-
-  <scm>
-    <connection>scm:git:git@github.com:cibseven-community-hub/cibseven-bpm-api.git</connection>
-    <url>scm:git:git@github.com:cibseven-community-hub/cibseven-bpm-api.git</url>
-    <developerConnection>scm:git:git@github.com:cibseven-community-hub/cibseven-bpm-api.git</developerConnection>
-    <tag>HEAD</tag>
-  </scm>
-
-  <developers>
-    <developer>
-      <id>cibseven.org</id>
-      <name>CIB seven Community</name>
-      <email>community@cibseven.org</email>
-      <url>http://cibseven.org</url>
-      <organization>cibseven.org</organization>
-      <organizationUrl>http://cibseven.org</organizationUrl>
-    </developer>
-  </developers>
 
 </project>
