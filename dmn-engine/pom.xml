@@ -16,12 +16,10 @@
     <dependency>
       <groupId>org.cibseven.bpm.model</groupId>
       <artifactId>cibseven-dmn-model</artifactId>
-      <version>${cibseven-engine.version}</version>
     </dependency>
     <dependency>
       <groupId>org.cibseven.commons</groupId>
       <artifactId>cibseven-commons-typed-values</artifactId>
-      <version>${cibseven-engine.version}</version>
     </dependency>
 
   </dependencies>
