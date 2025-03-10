@@ -2,7 +2,8 @@
 
 A small extract of the API layer from the greatest process engine ever.
 
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.cibseven.community.cibseven-api/cibseven-bpm-engine-api/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.cibseven.community.cibseven-api/cibseven-bpm-engine-api)
+[![CIB seven 1.1.0](https://img.shields.io/badge/CIB%20seven-1.1.0-orange.svg)](https://docs.cibseven.org/manual/1.1/)
+[![Maven Central](https://img.shields.io/maven-central/v/org.cibseven.community.cibseven-api/cibseven-bpm-engine-api?label=Maven%20Central)](https://central.sonatype.com/artifact/org.cibseven.community.cibseven-api/cibseven-bpm-engine-api)
 
 ## What is this?
 
@@ -31,7 +32,7 @@ If you just want to start using the library, put the following dependency into y
 <dependency>
   <groupId>org.cibseven.community.cibseven-api</groupId>
   <artifactId>cibseven-bpm-engine-api</artifactId>
-  <version>7.22.0</version>
+  <version>1.1.0</version>
 </dependency>
 ```
 
@@ -41,7 +42,7 @@ If you are interested in using the DMN engine API only, put the following depend
 <dependency>
     <groupId>org.cibseven.community.cibseven-api</groupId>
     <artifactId>cibseven-dmn-engine-api</artifactId>
-    <version>7.22.0</version>
+    <version>1.1.0</version>
 </dependency>
 ```
 
@@ -49,26 +50,26 @@ If you are interested in using the DMN engine API only, put the following depend
 If you are using Gradle Kotlin DSL add to your `build.gradle.kts`:
 
 ```kotlin
-implementation("org.cibseven.community.cibseven-api:cibseven-bpm-engine-api:7.22.0")
+implementation("org.cibseven.community.cibseven-api:cibseven-bpm-engine-api:1.1.0")
 ```
 
 and for DMN only:
 
 ```kotlin
-implementation("org.cibseven.community.cibseven-api:cibseven-dmn-engine-api:7.22.0")
+implementation("org.cibseven.community.cibseven-api:cibseven-dmn-engine-api:1.1.0")
 ```
 
 
 For Gradle Groovy DSL add to your `build.gradle`:
 
 ```groovy
-implementation 'org.cibseven.community.cibseven-api:cibseven-bpm-engine-api:7.22.0'
+implementation 'org.cibseven.community.cibseven-api:cibseven-bpm-engine-api:1.1.0'
 ```
 
 and for DMN only:
 
 ```groovy
-implementation 'org.cibseven.community.cibseven-api:cibseven-bpm-engine-api:7.22.0'
+implementation 'org.cibseven.community.cibseven-api:cibseven-bpm-engine-api:1.1.0'
 ```
 
 Please note that the version of this library is tightly-coupled to the version of original CIB seven API.  
