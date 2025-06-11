@@ -1,9 +1,16 @@
 # CIB seven Engine API
 
-A small extract of the API layer from the greatest process engine ever.
+> A small extract of the API layer from the greatest process engine ever.
 
 [![CIB seven 2.0.0](https://img.shields.io/badge/CIB%20seven-2.0.0-orange.svg)](https://docs.cibseven.org/manual/2.0/)
 [![Maven Central](https://img.shields.io/maven-central/v/org.cibseven.community.cibseven-api/cibseven-bpm-engine-api?label=Maven%20Central)](https://central.sonatype.com/artifact/org.cibseven.community.cibseven-api/cibseven-bpm-engine-api)
+
+# Relocation
+
+This project is **relocated** to https://github.com/holunda-io/c7 and **will be developed** further there.
+Last release produced from this location will be **7.24**
+This repository will be archived in October 2025.
+
 
 ## What is this?
 
