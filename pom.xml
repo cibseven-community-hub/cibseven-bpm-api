@@ -27,7 +27,7 @@
     <maven.compiler.source>${java.version}</maven.compiler.source>
     <maven.compiler.target>${java.version}</maven.compiler.target>
 
-    <cibseven-engine.version>2.1.0-SNAPSHOT</cibseven-engine.version>
+    <cibseven-engine.version>2.1.0</cibseven-engine.version>
   </properties>
 
   <modules>
