@@ -5,7 +5,7 @@
   <parent>
     <groupId>org.cibseven.community</groupId>
     <artifactId>release-parent</artifactId>
-    <version>2.1.0-SNAPSHOT</version>
+    <version>1.1.0-SNAPSHOT</version>
     <!-- do not remove empty tag -->
     <relativePath />
   </parent>
@@ -82,7 +82,7 @@
           <!-- Java compiler -->
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
-          <version>3.13.0</version>
+          <version>3.14.0</version>
           <configuration>
             <encoding>${project.build.sourceEncoding}</encoding>
             <source>${maven.compiler.source}</source>
@@ -167,13 +167,13 @@
         <!-- Deploy -->
         <plugin>
           <artifactId>maven-deploy-plugin</artifactId>
-          <version>3.1.3</version>
+          <version>3.1.4</version>
         </plugin>
 
         <!-- Install -->
         <plugin>
           <artifactId>maven-install-plugin</artifactId>
-          <version>3.1.3</version>
+          <version>3.1.4</version>
         </plugin>
 
         <!-- Enforce -->
@@ -248,9 +248,14 @@
 
   <repositories>
     <repository>
-      <id>mvn-cibseven-public</id>
-      <name>CIB seven Public Repository</name>
-      <url>https://artifacts.cibseven.org/repository/public</url>
+      <id>mvn-cibseven-community</id>
+      <name>CIB seven Community Repository</name>
+      <url>https://artifacts.cibseven.org/repository/community</url>
+    </repository>
+    <repository>
+      <id>mvn-cibseven-community-snapshots</id>
+      <name>CIB seven Community Snapshots Repository</name>
+      <url>https://artifacts.cibseven.org/repository/community-snapshots</url>
     </repository>
   </repositories>
 
