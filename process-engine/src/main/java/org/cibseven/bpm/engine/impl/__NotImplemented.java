@@ -5,5 +5,5 @@ package org.cibseven.bpm.engine.impl;
  */
 public interface __NotImplemented {
   UnsupportedOperationException EXCEPTION = new UnsupportedOperationException(
-    "This is a fake implementation provided by camunda-bpm-api. Please use the real engine instead.");
+    "This is a fake implementation provided by cibseven-bpm-api. Please use the real engine instead.");
 }

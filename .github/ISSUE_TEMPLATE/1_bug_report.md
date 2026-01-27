@@ -1,6 +1,6 @@
 ---
 name: 'Bug report'
-about: 'Report a bug in camunda-bpm-api'
+about: 'Report a bug in cibseven-bpm-api'
 title:
 labels: 'type: bug :bug:'
 assignees:
@@ -9,8 +9,8 @@ assignees:
 
 ### Steps to reproduce
 
-* camunda-bpm-api version:
-* Camunda BPM version:
+* cibseven-bpm-api version:
+* CIB seven BPM version:
 * JDK version:
 * Operating system:
 * Complete executable reproducer: (e.g. GitHub Repo)

@@ -2,7 +2,7 @@
 
 A small extract of the API layer from the greatest process engine ever.
 
-[![CIB seven 1.1.0](https://img.shields.io/badge/CIB%20seven-1.1.0-orange.svg)](https://docs.cibseven.org/manual/1.1/)
+[![CIB seven 2.0.0](https://img.shields.io/badge/CIB%20seven-2.0.0-orange.svg)](https://docs.cibseven.org/manual/2.0/)
 [![Maven Central](https://img.shields.io/maven-central/v/org.cibseven.community.cibseven-api/cibseven-bpm-engine-api?label=Maven%20Central)](https://central.sonatype.com/artifact/org.cibseven.community.cibseven-api/cibseven-bpm-engine-api)
 
 ## What is this?
@@ -32,7 +32,7 @@ If you just want to start using the library, put the following dependency into y
 <dependency>
   <groupId>org.cibseven.community.cibseven-api</groupId>
   <artifactId>cibseven-bpm-engine-api</artifactId>
-  <version>1.1.0</version>
+  <version>2.0.0</version>
 </dependency>
 ```
 
@@ -42,7 +42,7 @@ If you are interested in using the DMN engine API only, put the following depend
 <dependency>
     <groupId>org.cibseven.community.cibseven-api</groupId>
     <artifactId>cibseven-dmn-engine-api</artifactId>
-    <version>1.1.0</version>
+    <version>2.0.0</version>
 </dependency>
 ```
 
@@ -50,26 +50,26 @@ If you are interested in using the DMN engine API only, put the following depend
 If you are using Gradle Kotlin DSL add to your `build.gradle.kts`:
 
 ```kotlin
-implementation("org.cibseven.community.cibseven-api:cibseven-bpm-engine-api:1.1.0")
+implementation("org.cibseven.community.cibseven-api:cibseven-bpm-engine-api:2.0.0")
 ```
 
 and for DMN only:
 
 ```kotlin
-implementation("org.cibseven.community.cibseven-api:cibseven-dmn-engine-api:1.1.0")
+implementation("org.cibseven.community.cibseven-api:cibseven-dmn-engine-api:2.0.0")
 ```
 
 
 For Gradle Groovy DSL add to your `build.gradle`:
 
 ```groovy
-implementation 'org.cibseven.community.cibseven-api:cibseven-bpm-engine-api:1.1.0'
+implementation 'org.cibseven.community.cibseven-api:cibseven-bpm-engine-api:2.0.0'
 ```
 
 and for DMN only:
 
 ```groovy
-implementation 'org.cibseven.community.cibseven-api:cibseven-bpm-engine-api:1.1.0'
+implementation 'org.cibseven.community.cibseven-api:cibseven-bpm-engine-api:2.0.0'
 ```
 
 Please note that the version of this library is tightly-coupled to the version of original CIB seven API.  
@@ -81,6 +81,7 @@ Used BPM engine:
 | CIB seven BPM Version | CIB seven BPM API Version | 
 |-----------------------|--------------------------:| 
 | 1.1.0                 |                     1.1.0 |
+| 2.0.0                 |                     2.0.0 |
 
 
 Upstream:
@@ -88,6 +89,7 @@ Upstream:
 io.holunda.data:camunda-bpm-api | org.cibseven.community.data:cibseven-bpm-api
 --- | --- 
 7.22.1 | 1.1.0
+7.23.0 | 2.0.0
 
 ## License
 

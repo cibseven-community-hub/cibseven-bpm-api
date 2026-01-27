@@ -1,6 +1,6 @@
 ---
 name: 'Feature request'
-about: 'Suggest a feature for camunda-bpm-api'
+about: 'Suggest a feature for cibseven-bpm-api'
 title:
 labels: 'type: enhancement'
 assignees:
@@ -9,8 +9,8 @@ assignees:
 
 ### Scenario
 
-* camunda-bpm-api version:
-* Camunda BPM version:
+* cibseven-bpm-api version:
+* CIB seven version:
 * Description of your use case: (detailed description or executable reproducer, e.g. GitHub repo)
 
 ### Current Behaviour
