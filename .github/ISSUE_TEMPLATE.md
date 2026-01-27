@@ -1,3 +1,3 @@
 Please use one of the following templates:
 
-https://github.com/holunda-io/camunda-bpm-api/issues/new/choose
+https://github.com/cibseven-community-hub/cibseven-bpm-api/issues/new/choose
