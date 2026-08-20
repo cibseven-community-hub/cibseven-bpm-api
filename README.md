@@ -5,13 +5,6 @@
 [![CIB seven 2.2.0](https://img.shields.io/badge/CIB%20seven-2.2.0-orange.svg)](https://docs.cibseven.org/manual/2.2/)
 [![Maven Central](https://img.shields.io/maven-central/v/org.cibseven.community.cibseven-api/cibseven-bpm-engine-api?label=Maven%20Central)](https://central.sonatype.com/artifact/org.cibseven.community.cibseven-api/cibseven-bpm-engine-api)
 
-# Relocation
-
-This project is **relocated** to https://github.com/holunda-io/c7 and **will be developed** further there.
-Last release produced from this location will be **7.24**
-This repository will be archived in October 2025.
-
-
 ## What is this?
 
 Sometimes for building libraries it is useful to have the API only, without the implementation. This library extracts the official Java CIB seven Engine API from CIB seven JAR and packages it as a small JAR. By doing so, we had to provide very few own classes, to cut the track to implementation. It is by **NO MEANS** a replacement, but just a bunch of classes which may be required on the classpath, if you use a library referencing CIB seven BPM classes (but not using them).
@@ -100,6 +93,12 @@ io.holunda.data:camunda-bpm-api | org.cibseven.community.data:cibseven-bpm-api
 7.22.1 | 1.1.0
 7.23.0 | 2.0.0
 7.24.0 | 2.1.0
+
+# Relationship to Upstream
+
+This project is a fork of the [holunda-io/camunda-bpm-api](https://github.com/holunda-io/camunda-bpm-api) Community Hub plugin, which has since been relocated to [holunda-io/c7](https://github.com/holunda-io/c7).
+
+The CIB seven project is currently exploring opportunities for collaboration with the upstream project and its maintainers.
 
 ## License
 
